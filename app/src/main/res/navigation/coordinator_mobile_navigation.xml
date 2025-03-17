@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_group_chat">
+
+
+    <fragment
+        android:id="@+id/navigation_group_chat"
+        android:name="com.app.kiyalearning.coordinator.dashboard.ui.groupchat.GroupChatFragment"
+        android:label="@string/group_chat"
+        tools:layout="@layout/fragment_coo_chat_list" />
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.app.kiyalearning.coordinator.dashboard.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile_coordinator" />
+
+</navigation>

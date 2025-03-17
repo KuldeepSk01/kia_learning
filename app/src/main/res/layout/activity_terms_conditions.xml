@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_theme_color"
+        tools:context=".student.dashboard.ui.home.TermsConditionsActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/status_bar_size"
+            tools:context=".account.ProfileActivity">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/app_theme_color"
+                android:elevation="@dimen/_4sdp"
+                android:outlineProvider="background"
+                android:outlineSpotShadowColor="@color/app_theme_color"
+                android:outlineAmbientShadowColor="@color/app_theme_color"
+                tools:targetApi="p">
+
+                <ImageView
+                    android:id="@+id/backIcon"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:elevation="@dimen/_2sdp"
+                    android:outlineAmbientShadowColor="@color/app_theme_color"
+                    android:outlineProvider="background"
+                    android:outlineSpotShadowColor="@color/app_theme_color"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_back"
+                    tools:targetApi="p"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/headerTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:layout_marginEnd="@dimen/margin_end"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp" />
+
+
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/nested_scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray6"
+                android:layout_below="@+id/header">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_start"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/terms_conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="@string/since_the_beginning_of_the_internet_millions_and_millions_and_millions_of_blogs_have_been_created_many_have_died_due_to_lost_interest_or_their_owners_giving_up_on_the_idea_while_others_have_thrived_and_continue_to_grow_making_money_and_earning_their_owners_a_steady_income_it_s_a_constant_evolution_of_content_that_keeps_people_coming_back_for_more_especially_if_these_blogs_contact_highly_resourceful_material_that_people_find_useful_and_interesting_each_example_listed_in_this_blog_post_are_all_different_in_some_way_and_all_bring_something_unique_to_their_readers_subscribers_i_want_to_show_you_what_is_possible_and_how_you_can_take_inspiration_from_them_and_create_an_awesome_blog_of_your_own"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginStart="@dimen/margin_start"
+                        android:layout_marginEnd="@dimen/margin_end"
+                        android:layout_marginTop="@dimen/margin_start"
+                        />
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <include
+                android:id="@+id/loader"
+                layout="@layout/custom_loader"
+                />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

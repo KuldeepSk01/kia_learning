@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "714206104747",
+    "project_id": "kiyalearningapp",
+    "storage_bucket": "kiyalearningapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714206104747:android:4a0de02177aad81222fbee",
+        "android_client_info": {
+          "package_name": "com.app.kiyalearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714206104747-hd9d2m6qouu1i0keg4cevdlu0r8c252f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw6LP03-1Jn1V5jJWxX9EhtHN_LV03lFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714206104747-hd9d2m6qouu1i0keg4cevdlu0r8c252f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

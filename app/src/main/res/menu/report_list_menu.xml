@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/first"
+        android:title="@string/link_not_coming" />
+    <item
+        android:id="@+id/second"
+        android:title="@string/join_button_not_showing" />
+    <item
+        android:id="@+id/third"
+        android:title="@string/app_is_crashing" />
+    <item
+        android:id="@+id/forth"
+        android:title="@string/website_is_crashing" />
+    <item
+        android:id="@+id/fifth"
+        android:title="@string/google_meet_not_open" />
+
+    <item
+        android:id="@+id/six"
+        android:title="@string/buttons_status_not_clear" />
+
+</menu>

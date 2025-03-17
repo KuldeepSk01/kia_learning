@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_start">@dimen/_10sdp</dimen>
+    <dimen name="margin_end">@dimen/_10sdp</dimen>
+
+    <dimen name="margin_start10">@dimen/_10sdp</dimen>
+    <dimen name="margin_end10">@dimen/_10sdp</dimen>
+
+    <dimen name="margin_start12">@dimen/_12sdp</dimen>
+    <dimen name="margin_end12">@dimen/_12sdp</dimen>
+
+    <dimen name="margin_start16">@dimen/_16sdp</dimen>
+    <dimen name="margin_end16">@dimen/_16sdp</dimen>
+
+    <dimen name="margin_top">@dimen/_10sdp</dimen>
+    <dimen name="margin_6sdp">@dimen/_6sdp</dimen>
+    <dimen name="keypad_height">@dimen/_150sdp</dimen>
+    <dimen name="margin_bottom">@dimen/_8sdp</dimen>
+    <dimen name="status_bar_size">@dimen/_25sdp</dimen>
+</resources>

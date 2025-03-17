@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCross"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_cross"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/ivCross"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/report_technical_prob_lem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReportList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/select_issue_list"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/card_gradient_background_6"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivIcon" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etReportComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/card_gradient_background_6"
+                    android:hint=" Comment...."
+                    android:lines="5"
+                    android:gravity="top"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvReportList" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etClassName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/inter"
+                    android:hint="@string/class_date_"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/etClassTime"
+                    android:background="@drawable/card_gradient_background_6"
+                    android:textColor="@color/black"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    app:layout_constraintTop_toBottomOf="@id/etReportComment" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etClassTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:fontFamily="@font/inter"
+                    android:hint="@string/class_time"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:gravity="center_vertical"                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:background="@drawable/card_gradient_background_6"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/etClassName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etReportComment" />
+
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSendBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/card_gradient_background_4"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etClassName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

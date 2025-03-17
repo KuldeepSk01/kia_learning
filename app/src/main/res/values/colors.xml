@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!--Gray Shades-->
+    <color name="dark_gray">#1E2126</color>
+    <color name="gray1">#5C6574</color>
+    <color name="gray2">#828B9A</color>
+    <color name="gray3">#B9C1CC</color>
+    <color name="gray4">#CAD1D9</color>
+    <color name="gray5">#E4E9ED</color>
+    <color name="gray6">#F0F3F8</color>
+
+
+
+    <!--    app colors-->
+
+    <color name="app_theme_color">#737171</color>
+    <color name="chat_theme_color">#044C07</color>
+    <color name="chat_msg_bg_color">#E4FCD4</color>
+    <color name="left_chat_msg_bg_color">#E8E8E8</color>
+    <color name="app_theme_color1">@color/gray3</color>
+    <color name="light_app_theme_color">#FDB8A4</color>
+    <color name="light_gray">#ABABAB</color>
+    <color name="medium_gray">#ABABAB</color>
+    <color name="much_light_gray">#DADADA</color>
+    <color name="theme_hint_color">#C69EAA</color>
+    <color name="whiteTrans">#80FFFFFF</color >
+    <color name="link_color">#2677EB</color>
+    <color name="red">#FC1E1E</color>
+    <color name="button_back_red">#F43F5E</color>
+
+    <color name="card_background_blue">#DCF0F9</color>
+    <color name="home_selector_color">#F1F1F1</color>
+
+
+    <color name="blue_card">#62CEF9</color>
+    <color name="green_card">#4AC989</color>
+    <color name="purple_card">#A28EEC</color>
+    <color name="red_card">#FF7070</color>
+    <color name="light_red">#FBBCBC</color>
+    <color name="yellowish_card">#ECAC4A</color>
+    <color name="pink_card">#FB80BA</color>
+    <color name="card_background_color">#f8f8f8</color>
+    <color name="filter_color">#F3F3F3</color>
+    <color name="dark_blue">#1973DB</color>
+    <color name="light_green">#66FF66</color>
+    <color name="green">#66FF66</color>
+    <color name="dark_green">#4CAF50</color>
+    <color name="star_yellow_color">#FDD835</color>
+    <color name="card_color1">#FBF1E1</color>
+
+
+    <!--   edittext login bg-->
+    <color name="edittext_login_bg">#EFF3FA</color>
+    <color name="edittext_login_border">#D9DEE6</color>
+
+
+
+</resources>

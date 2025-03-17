@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/myDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".coordinator.dashboard.CoordinatorDashBoardActivity"
+        tools:ignore="HardcodedText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_theme_color"
+            android:paddingTop="@dimen/status_bar_size">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="@color/white"
+                app:labelVisibilityMode="auto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:menu="@menu/coordinator_bottom_nav_menu"
+                app:theme="@style/ThemeOverlay.AppCompat.navTheme" />
+
+            <fragment
+                android:id="@+id/nav_host_fragment_activity_dashboard"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toTopOf="@id/nav_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:navGraph="@navigation/coordinator_mobile_navigation" />
+
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/app_theme_color"
+                android:outlineAmbientShadowColor="@color/app_theme_color"
+                android:outlineProvider="background"
+                android:outlineSpotShadowColor="@color/app_theme_color"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="p">
+
+
+                <TextView
+                    android:id="@+id/headerTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/group_chat"
+                    android:textAllCaps="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/edit_image"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_end"
+                    android:src="@drawable/ic_profile"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_toStartOf="@+id/edit_image"
+                    android:layout_toEndOf="@+id/headerTxt"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:text="Dlf ,Phase 3 Gurugram"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/dashboardNotificationLay"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:backgroundTint="@color/gray2"
+                    android:elevation="@dimen/_4sdp"
+                    android:outlineAmbientShadowColor="@color/app_theme_color"
+                    android:outlineProvider="background"
+                    android:outlineSpotShadowColor="@color/app_theme_color"
+                    tools:targetApi="p">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_bell"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/red_dot"
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/red"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7ssp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

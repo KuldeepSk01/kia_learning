@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLeftChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp">
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:text="@string/reply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/message_image_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/message_image_card"
+            app:layout_constraintTop_toTopOf="@+id/message_image_card" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/message_image_card"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/message_image_card1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/message_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_reply" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/message_image_card1"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message_image_card">
+
+            <ImageView
+                android:id="@+id/userProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_profile" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/my_reply_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_80sdp"
+            android:background="@drawable/chat_textview_other_reply_background"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/message_image_card1"
+            app:layout_constraintTop_toBottomOf="@+id/message_image_card">
+
+            <TextView
+                android:id="@+id/usernameProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:elevation="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:text="@string/title_wallet"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+
+                />
+
+            <!--   <TextView
+                   android:id="@+id/temp_my_reply"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:autoLink="web"
+                   android:background="@drawable/chat_textview_other_reply_background"
+                   android:fontFamily="@font/inter"
+                   android:minWidth="@dimen/_125sdp"
+                   android:paddingStart="@dimen/_10sdp"
+                   android:paddingTop="@dimen/_10sdp"
+                   android:paddingEnd="@dimen/_10sdp"
+                   android:paddingBottom="@dimen/_20sdp"
+                   android:text="@string/school_name_"
+                   android:textColor="#E8E8E8"
+                   android:textSize="@dimen/_11ssp"
+                   android:textStyle="bold" />-->
+            <!--<TextView
+                android:id="@+id/my_replied_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:fontFamily="@font/inter"
+                android:paddingStart="@dimen/_10sdp"
+                android:minWidth="@dimen/_125sdp"
+                android:text="Replied"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMyRepliedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:backgroundTint="@color/gray5"
+                android:elevation="0dp"
+                android:minWidth="@dimen/_125sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/my_replied_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/my_replied_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/inter"
+                        android:gravity="end"
+                        android:layout_alignParentRight="@+id/my_replied_msg"
+
+                        android:minWidth="@dimen/_125sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Nini Mini"
+                        android:textColor="@color/gray1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/my_replied_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/my_replied_name"
+                        android:layout_alignStart="@+id/my_replied_name"
+                        android:layout_marginEnd="@dimen/margin_end"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/inter"
+                        android:gravity="end"
+                        android:minWidth="@dimen/_125sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:text="Hello Sir"
+                        android:textColor="@color/gray1"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlPdfReplyLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/imagePdf"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_doc_file"
+                        app:tint="@color/dark_gray" />
+
+                    <TextView
+                        android:id="@+id/pdf_file_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_toEndOf="@+id/imagePdf"
+                        android:ellipsize="end"
+                        android:hint="1052000_rng_web.png"
+                        android:paddingStart="@dimen/margin_start"
+                        android:paddingEnd="@dimen/margin_end"
+                        android:textColor="@color/gray1"
+                        android:textSize="@dimen/_11ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlReplyImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/myImageName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/inter"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:minWidth="@dimen/_125sdp"
+                        android:textColor="@color/gray1"
+                        android:textSize="@dimen/_10ssp"
+                        android:text="nini mini"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:layout_margin="@dimen/_10sdp"
+                        android:id="@+id/ivReplyImage"
+                        android:src="@drawable/ic_doc_file"
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_below="@+id/myImageName"
+                        />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/my_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvMyRepliedLayout"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:autoLink="web"
+                android:fontFamily="@font/inter"
+                android:text="nini mini"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_11ssp" />
+
+
+            <TextView
+                android:id="@+id/my_reply_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_reply"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="1"
+                android:text="02 May 2023 07:06 AM"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_7ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

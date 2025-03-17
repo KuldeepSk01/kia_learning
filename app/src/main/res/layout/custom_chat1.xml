@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/message_image_card"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/message_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_profile" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/my_reply_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/message_image_card"
+            >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:text="@string/title_wallet"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:elevation="@dimen/_5sdp"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+
+                />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/temp_my_reply"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:autoLink="web"-->
+<!--                android:fontFamily="@font/inter"-->
+<!--                android:minWidth="@dimen/_125sdp"-->
+<!--                android:text="@string/school_name_"-->
+<!--                android:textColor="#E8E8E8"-->
+<!--                android:textSize="@dimen/_11ssp"-->
+<!--                android:textStyle="bold" />-->
+
+
+            <TextView
+                android:id="@+id/my_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:fontFamily="@font/inter"
+                android:text="@string/school_name_"
+                android:minWidth="@dimen/_100sdp"
+                android:paddingEnd="@dimen/_24sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:background="@drawable/chat_textview_other_reply_background"
+                android:textColor="@color/gray1"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/_11ssp"
+                />
+
+
+            <TextView
+                android:id="@+id/my_reply_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="1"
+                android:layout_alignEnd="@+id/my_reply"
+                android:text="02 May 2023 07:06 AM"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_7ssp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_alignBottom="@+id/my_reply"
+                app:layout_constraintHorizontal_bias="1" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_end"
+        app:cardBackgroundColor="@color/cardview_light_background">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/margin_start"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/notification_logo"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/logo"
+                android:background="@color/gray6"
+                android:layout_marginStart="@dimen/margin_start"
+                app:shapeAppearanceOverlay="@style/shapeOverlay50percent" />
+
+
+
+            <TextView
+                android:id="@+id/notification_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_toEndOf="@id/notification_logo"
+                android:text="@string/last_name"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginEnd="@dimen/margin_end"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_toEndOf="@id/notification_logo"
+                android:layout_below="@+id/notification_heading"
+                android:text="@string/_27_march_2023"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/inter"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginEnd="@dimen/margin_end"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:rotation="90"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_menu"
+                app:tint="@color/gray3" />
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

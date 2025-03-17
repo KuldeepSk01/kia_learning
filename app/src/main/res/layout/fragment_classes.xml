@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray6">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cons_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/search_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_marginStart="@dimen/margin_start"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/margin_end"
+                            android:background="@drawable/button_background"
+                            android:backgroundTint="@color/white"
+                            android:drawableStart="@drawable/ic_search"
+                            android:drawablePadding="@dimen/margin_start"
+                            android:fontFamily="@font/inter"
+                            android:hint="@string/search_by_subject"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_11ssp"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/date_picker_box"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_marginStart="@dimen/margin_start"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/margin_end"
+                            android:elevation="@dimen/_1sdp"
+                            android:visibility="gone"
+                            app:cardCornerRadius="@dimen/_8sdp"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/date_chooser_textView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/inter"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:text="@string/select_date"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/_12ssp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--this is for showing text-->
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tvIfYouJoinClassText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:textColor="@color/yellowish_card"
+                        app:layout_constraintTop_toBottomOf="@+id/cons_layout"
+                        android:text="@string/if_you_join_the_class_"
+                        />
+
+
+
+                    <!--this is for Today class-->
+                    <RelativeLayout
+                        android:id="@+id/rlTodayClasses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvIfYouJoinClassText">
+
+                        <TextView
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:id="@+id/tvTodayClassTXT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/today_class"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <TextView
+                            android:id="@+id/tvNoTodayClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTodayClassTXT"
+                            android:gravity="center"
+                            android:text="@string/no_class_found"
+                            android:textColor="@color/gray2"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvTodayClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvNoTodayClass"
+                            android:layout_marginTop="@dimen/margin_start"
+                            android:clipToPadding="false"
+                            android:paddingTop="@dimen/margin_start"
+                            android:paddingBottom="@dimen/margin_start"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <!--this is for Upcoming class-->
+                    <RelativeLayout
+                        android:id="@+id/rlUpcomingClasses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rlTodayClasses">
+
+                        <TextView
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:id="@+id/tvUpcomingClassTXT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/upcoming_classes"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <TextView
+                            android:id="@+id/tvNoUpcomingClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvUpcomingClassTXT"
+                            android:gravity="center"
+                            android:text="@string/no_class_found"
+                            android:textColor="@color/gray2"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvUpcomingClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvNoUpcomingClass"
+                            android:layout_marginTop="@dimen/margin_start"
+                            android:clipToPadding="false"
+                            android:paddingTop="@dimen/margin_start"
+                            android:paddingBottom="@dimen/margin_start"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <!--this is for Previous class-->
+                    <TextView
+                        android:id="@+id/tvPreviousClassTXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="@string/previous_class"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_14ssp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/rlUpcomingClasses" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_start"
+                        android:paddingBottom="@dimen/_50sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPreviousClassTXT">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvClassCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Count(0)"
+                            android:textColor="@color/blue_card"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvClassCount"
+                            android:layout_marginTop="@dimen/margin_start"
+                            android:clipToPadding="true"
+                            android:paddingTop="@dimen/margin_start"
+                            android:paddingBottom="@dimen/_50sdp" />
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/no_shift_image"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:alpha="0.7"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:src="@drawable/ic_calendar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.32999998" />
+
+                    <TextView
+                        android:id="@+id/no_shift_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:alpha="0.7"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/no_data_available"
+                        android:textColor="@color/app_theme_color"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/no_shift_image"
+                        app:layout_constraintStart_toStartOf="@+id/no_shift_image"
+                        app:layout_constraintTop_toBottomOf="@+id/no_shift_image" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/loader"
+            layout="@layout/custom_loader" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

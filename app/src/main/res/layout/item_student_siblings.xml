@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlItemSibling"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvItemSibling"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            android:minWidth="@dimen/_24sdp"
+            app:cardBackgroundColor="@color/card_background_blue"
+            app:cardCornerRadius="@dimen/_50sdp"
+            app:cardElevation="0dp"
+
+            >
+            <ImageView
+                android:id="@+id/ivItemSiblingProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <!--
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/classes_offered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:minWidth="@dimen/_24sdp"
+                            android:paddingStart="@dimen/_2sdp"
+                            android:paddingEnd="@dimen/_2sdp"
+                            android:text="@string/_18"
+                            android:textColor="@color/blue_card"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+            -->
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvSiblingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvItemSibling"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/inter"
+            android:text="Sibling 1"
+            android:textAlignment="center"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/_8ssp" />
+
+    </RelativeLayout>
+</layout>
+
